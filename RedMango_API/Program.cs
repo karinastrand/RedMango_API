@@ -35,7 +35,7 @@ builder.Services.Configure<IdentityOptions>(options =>
 if (builder.Environment.IsProduction())
 {
     builder.Configuration.AddAzureKeyVault(
-        new Uri($"https://{builder.Configuration["KeyVaultName"]}.vault.azure.net/"),
+        new Uri($"https://siaredmango.vault.azure.net/"),
         new DefaultAzureCredential());
 }
 var key = builder.Configuration.GetValue<string>("ApiSettings:Secret");
